@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<text>Formulário com hidden</text>
+	</head>
+<!--
+Além da marcação PASSWORD com um valor VALUE default, é possível "esconder" informação
+passada dentro de blocos FORM com uma marcação HIDDEN. Esta informação é recebida pelo
+script de decodificação no servidor, mas não é diretamente exibida ao usuário no formulário.
+
+Obs.: Mesmo que o valor especificado em HIDDEN VALUE não seja exibido no formulário, o usuário
+pode vê-lo através da operação de visualização do fonte do hiperdocumento, da mesma forma
+como no campo PASSWORD.
+-->
+<body>
+	<form method="Post action="/cgi-bin/post-query">
+	<br>
+	Você não pode visualizar nada aqui em baixo.
+	<input type="hidden" name="nome_oculto" value="form12">
+	</form>
+
+</body>	
+</html>

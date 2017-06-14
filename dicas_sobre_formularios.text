@@ -1,0 +1,85 @@
+Formulários.
+Quais são os dois métodos para enviar informações para o servidor?
+R: POST e GET.
+
+METHOD="GET"
+A maioria dos documentos HTML são recuperados a partir da requisão de uma única URL ao servidor. Assim, um formulário que utilize este método, envia toda a sua informação ao final da URL ativa.
+
+METHOD="POST"
+Este método transmite  toda a informação fornecida via formulário, imediatamente após a URL ativa. Ou seja, quando o servidor recebe uma ativação de um formulário utilizaNdo POST ele sabe que precisa continuar "ouvindo" para obter a informação. Este é o melhor método.
+
+* segundo, o formulário precisa saber para onde enviar a informação. Esta é a URL sendo ativa a partir do formulário, e ela é referenciada através da marcação ACTION. Esta URL em geral aponta para um script CGI que irá receber e decodificar os resultados. Lembre-se que se você está referenciando um script que resite no mesmo servidor o formulário, você não precisa incluir a URL completa.
+
+ACTION=";cgi-bin/post-query" para um script no seu servidor
+
+ACTION="http://www.cr-df.mp.br/cgi-bin/post-query" para um script no servidor CR/DF
+
+Após você construir estas marcações, seu formulário geralmente terá a seguinte estrutura:
+
+<FORM METHOD="POST ACTION="/cgi-bin/post-query">
+
+Marcações de campos de entrada e HTML em geral
+
+</FORM>
+
+Observe que este formulário utiliza o método POST e envia as informações difitadas para um script local chamado post-query no diretório /cgi-bin do servidor.
+
+Outra informação importante: cada marcação de entrada em um formulário tem uma opção NAME associada, de tal forma que o script saida que o nome, isto é como chamar cada valor digitado. Certamente voc~e pode definir mais de um campo de entrada textual ou menu dentro de um formulário, mas certifique-se de que cada um possui um nome diferente.
+
+Texto
+a. Entrada de texto comum - TEXT
+b. Entrada de texto protegido, senha - PASSWORD
+c. Entrada oculta - HIDDEN
+d. Entrada de várias linhas de texto - TEXTAREA
+
+a. Entrada de texto comum - TEXT
+(possui a largura padrão de 20 caracteres).
+Opções:
+VALUE="" OPCIONAL
+Utilizando a marcação VALUE você especifica que texto aparecerá no campo quando o formulário for exibido.
+SIZE="" OPCIONAL
+Esta marcação altera o tamanho deste campo exibido na tela.
+Obs.: o usuário sempre pederá digitar mais caracteres do que o tamanho do campo na tela, pois o texto irá se deslocar a esquerda dentro do campo.
+MAXLENGTH="" OPCIONAL
+Se você deseja limitar o número de caracteres que o usuário pode digitar, basta usar esta marcação. O formulário irá um bip e erro se o usuário tentar digitar além do permitido em MAXLENGTH.
+
+<FORM METHOD="POST" ACTION="/cgi-bin/pçost-query">
+
+Qual o primeiro nome?
+<INPUT TYPE="text" NAME="primeiro_nome" VALUE="carlos" SIZE="10" MAXLENGTH="15"
+</FORM>
+
+Obs.:
+· O valor informado em NAME deve utilizar sublinhado em vez de espaços em branco. Inserir
+espaços em branco nestes nomes pode causar problemas no servidor na decodificação dos
+valores informados.
+· Se seu formulário possui apenas um campo de entrada textual, ao teclar ENTER neste campo
+o formulário será submetido, como se o usuário tivesse acionado o botão SUBMIT.
+
+b. Entrada de texto protegido, senha - PASSWORD
+Marcações de entrada do tipo password são idênticas aos campos do tipo text, exceto pelo
+fato de todos os caracteres serem exibidos como asteriscos ( *).
+-
+Opções:
+VALUE="" OPCIONAL
+A marcação VALUE especifica um valor default para este campo.
+SIZE="" OPCIONAL
+Esta troca o tamanho do campo de password exibido na tela.
+MAXLENGTH="" OPCIONAL
+Limita o número de caracteres que o usuário pode informar como password.
+<FORM METHOD="POST" ACTION="/cgi-bin/post-query">
+Informe sua senha de acesso (8 caracteres):
+<INPUT TYPE="password" VALUE="xpto" NAME="sua_senha" SIZE="8" MAXLENGTH="8">
+</FORM>
+
+Password:
+Dicas:
+Se você pretende utilizar MAXLENGTH para limitar o número de caracteres informados, tenha
+certeza de especificar um SIZE com o mesmo tamanho, para fornecer ao usuário o sentimento
+de qual a largura do campo. Esta regra não foi utilizada no primeiro exemplo, que possui SIZE
+igual a 10, mas MAXLENGTH de 15, o que faz o campo se deslocar nos últimos 5 caracteres
+caso o valor informado possua mais do que 10 caracteres.
+· Mesmo que o valor default VALUE esteja representado por asteriscos, o usuário pode
+visualizar o seu valor através da recuperação do fonte do hiperdocumento em HTML (uma
+opção comum na maioria dos clientes WWW).
+

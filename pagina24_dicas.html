@@ -1,0 +1,350 @@
+<html>
+<head>
+	<text>Atributos</text>
+</head>
+
+<body>
+<h1>Atributos</h1>
+<h3>As marcações das tabelas, podem apresentar resultados diferentes, se acompanhadas de alguns atributos. Veja alguns exemplos</h3>
+
+	<UL>
+	<LI> <B>&ltBORDER></B><br>
+	Este atributo aparece junto a marcação TABLE. Caso esse atributo não pareceça, a tabela não terá bordas.
+	<br>
+	Ou seja, para obter uma  tabela com bordas, ela deve ser delimitada pelas marcações <B>&lttable border> &lt/table>.</B>
+	<br>
+	<br>
+
+	<LI><B>&ltALIGN><br></B>
+	Este atributo pode ser aplicado a TR, TH e TD, e controla como será o alinhamento do texto dentro de uma célula, com relação às bordas aterais.<br>
+	Aceita os valores left, center, right, respectivamente para alinhar a esquerda, centralizar ou alinhar a direita.
+	<h4>Veja o exemplo</h4>
+	
+	&lttable border><br>
+	&lttr><br>
+	&lttd>Primeira célula&lt/td><br>
+	&lttd>Segunda célula&lt/td><br>
+	&lttd>Terceira célula&lt/td><br>
+	&lt/tr>
+
+	<br>
+	<br>
+
+	&lttr><br>
+	&lttd align=center>centro&lt/td><br>
+	&lttd align=left>esquerda&lt/td><br>
+	&lttd align=right>direita&lt/td><br>
+	&lt/tr><br>
+	&lt/table>
+
+	<br>
+	<br>
+		
+	<table border>
+	<tr>
+	<td>Primeira célula</td><td>Segunda célula</td><td>Terceira célula</td>
+	</tr>
+	<tr>
+	<td align=center>centro</td>
+	<td align=left>esquerda</td>
+	<td align=right>direita</td>
+	</tr>
+	</table>
+	<br>
+
+	<LI> <B>&ltNOWRAP></B><br>
+	Este atributo evita que haja uma quebra de linha dentro de uma célula. Cautela ao utiliza-lo, para não produzir células muito largas.
+	<br>
+	<br>
+
+	<LI> <B>&ltCOLSPAN></B><br>
+	Pode ser aplicado a TH ou TD. Define colunas uma célula poderá abranger. Por padrão cada célula correspondente a uma coluna, ou seja COLPAN=1.
+	<h4>Exemplo</h4>
+	&lttable border><br>
+	&lttr><br>
+	&lttd colspan=3>3colunas&lt/td><br>
+	&lttd>normal&lt/td><br>
+	&lttd>normal&lt/td><br>
+	&lt/tr>
+
+	<br>
+	<br>
+
+	&lttr><br>
+	&lttd>Col 1&/td><br>
+	&lttd>col 2&/td><br>
+	&lttd>col 3&/td><br>
+	&lttd>col 4&/td><br>
+	&lttd>col 5&/td><br>
+	&lt/tr><br>
+	&lt/table>
+
+	<br>
+	<br>
+
+
+	<table border>
+	<tr>
+	<td colspan=3>3colunas</td><td>normal</td><td>normal</td>
+	</tr>
+	<tr>
+	<td>Col 1</td><td>col 2</td><td>col 3</td><td>col 4</td><td>col 5</td>
+	</tr>
+	</table>
+
+	<br>
+	<br>
+
+	<LI><B>&ltROWSPAN></B><br>
+	Este atributo pode ser aplicado a célula (TH e TD) e define quantas linhas uma mesma célula pode abranger. Assim como na marcação anterior, o padrão é uma células correspondente a uma linha.
+	<h4>Exemplo</h4>
+
+	&lttable border><br>
+	&lttr><br>
+	&lttd rowspan=3>3 linhas&lt/td><br>
+	&lttd>col 2&lt/td><br>
+	&lttd>col 3&lt/td><br>
+	&lttd>col 4&lt/td><br>
+	&lttd>col 5&lt/td><br>
+	&lt/tr>
+
+	<br>
+	<br>
+
+	&lttr><br>
+	&lttd>col 2&lt/td><br>
+	&lttd>col 3&lt/td><br>
+	&lttd>col 4&lt/td><br>
+	&lttd>col 5&lt/td><br>
+	&lt/tr>
+
+	<br>
+	<br>
+
+	&lttr><br>
+	&lttd>col 2&lt/td><br>
+	&lttd>col 3&lt/td><br>
+	&lttd>col 4&lt/td><br>
+	&lttd>col 5&lt/td><br>
+	&lt/tr><br>
+	&lt/table><br>
+	
+	<br>
+	<br>
+
+	<table border>
+	<tr>
+	<td rowspan=3>3 linhas</td>
+	<td>col 2</td><td>col 3</td><td>col 4</td><td>col 5</td></tr>
+	<tr>
+	<td>col 2</td><td>col 3</td><td>col 4</td><td>col 5</td>
+	</tr>
+	<tr>
+	<td>col 2</td><td>col 3</td><td>col 4</td><td>col 5</td>
+	</tr>
+	</table>
+
+	<br>
+	<br>
+
+	<B>Mais elementos de controle</B>
+	<br>
+
+	<LI> <B>BORDER=value></B>
+	<br>
+	Acrescentando um valor ao atributo BORDER é possível colocar tabelas em maior destaque:
+
+	<br>
+	<br>
+
+	&lttable border=5><br>
+	&lttr><br>
+	&lttd>teste1&lt/td><br>
+	&lttd>teste2&lt/td><br>
+	&lttd>teste3&lt/td><br>
+	&lt/tr>
+
+	<br>
+	<br>
+
+	&lttr><br>
+	&lttd>teste4&lt/td><br>
+	&lttd>texte5&lt/td><br>
+	&lttd>teste6&lt/td><br>
+	&lt/tr><br>
+	&lt/table><br>
+
+	<br>
+	<br>
+
+	<table border=5>
+	<tr>
+	<td>teste1</td> <td>teste2</td> <td>teste3</td>
+	</tr>
+	<tr>
+	<td>teste4</td><td>texte5</td><td>teste6</td>
+	</tr>
+	</table>
+
+	<br>
+	<br>
+
+	
+	<LI> <B>CELLSPACING=value></B><br>
+	Este atributo é aplicável à marcação TABLE. Como padrão, o Nestscape 1.1 utiliza espaço entre as céluas. Este atribuo define o espaço entre cada célula na tabela.
+
+	<br>
+	<br>
+
+	&lttable border cellspacing=5><br>
+	&lttr><br>
+	&lttd>teste1&lttd><br>
+	&lttd>teste2&lt/td><br>
+	&lttd>text3&lt/td><br>
+	&lt/tr>
+
+	<br>
+	<br>
+
+	&lttr><br>
+	&lttd>teste4&lttd><br>
+	&lttd>teste5&lt/td><br>
+	&lttd>text6&lt/td><br>
+	&lt/tr><br>
+	&lt/table><br>
+
+	<br>
+	<br>
+
+	<table border cellspacing=5>
+	<br>
+	<tr>
+	<td>teste1</td>
+	<td>teste2</td>
+	<td>text3</td>
+	</tr>
+	<td>teste4</td>
+	<td>teste5</td>
+	<td>text6</td>
+	</tr>
+	</table>
+
+	<br>
+	<br>
+
+	<LI> <B>CELLPADDING=&ltvalue></B>
+	<br>
+	Este atributo é aplicado também à marcação TABLE e define a distância entre o texto e a borda de cada célula.
+
+	<br>
+	<br>
+
+	&lttable border cellpadding=8>
+
+	&lttr><br>
+	&lttd>teste1</td><br>
+	&lttd>teste2</td><br>
+	&lttd>teste3</td><br>
+	&lt/tr><br>
+	<br>
+	&lttr><br>
+	&lttd>teste4</td><br>
+	&lttd>teste5</td><br>
+	&lttd>teste6</td><br>
+	&lt/tr><br>
+	&lt/table><br>
+
+	<br>
+	<br>
+
+	<table border cellpadding=8>
+	<tr>
+	<td>teste1</td>
+	<td>teste2</td>
+	<td>teste3</td>
+	</tr>
+	<tr>
+	<td>teste4</td>
+	<td>teste5</td>
+	<td>teste6</td>
+	</tr>
+	</table>
+
+	A tabela mais compacta possível seria definida como: <table border=0 cellspacing=0cellpadding=0>
+
+	<br>
+	<br>
+
+	<B><LI>WIDTH=&ltvalue or percent></B>
+	<br>
+	Este atributo pode ser aplicado  tanto a TABLE como a TH e TD. A ele tanto pode ser associado um valor de "pixels" (ponto em tela gráfica), com um valor percentual. Ou seja, determinada o quanto da tela uma tabela ou célula de tabela deverá ocupar.
+
+	<br>
+	<br>
+
+	<h6>Exemplos</h6>
+
+	&lttable border width=50%><br>
+	&lttr><br>
+	&lttd>segunda&lttd><br>
+	&lttd>ter&ccedil;a&lt/td><br>
+	&lttd>quarta&lt/td><br>
+	&lt/tr><br>
+	<br>
+	&lttr><br>
+	&lttd>quinta&lt/td><br>
+	&lttd>sexta&lt/td><br>
+	&lttd>S&aacute;bado&lt</td><br>
+	&lt/tr><br>
+	&lt/table><br>
+
+	<br>
+
+	<table border width=50%>
+	<tr>
+	<td>segunda&lt/td>
+	<td>ter&ccedil;a</td>
+	<td>quarta</td>
+	</tr>
+	<tr>
+	<td>quinta</td>
+	<td>sexta</td>
+	<td>S&aacute;bado</td>
+	</tr>
+	</table>
+
+	<h6>Outro exemplo</h6>
+
+	&lttable border><br>
+	&lttr><br>
+	&lttd with=50%>segunda&lt/td><br>
+	&lttd>terça&lt/td><br>
+	&lttd>quarta&lt/td><br>
+	&lt/tr><br>
+
+	<br>
+
+	&lttr><br>
+	&lttd>quinta&lt/td><br>
+	&lttd>sexta&lt/td><br>
+	&lttd>sábado&lt/td><br>
+	&lt/tr><br>
+	&lt/table><br>
+	<table border>
+	<tr>
+	<td with=50%>segunda</td>>
+	<td>terça</td>
+	<td>quarta</td>
+	</tr>
+
+	<tr>
+	<td>quinta</td>
+	<td>sexta</td>
+	<td>sábado</td>
+	</tr>
+	</table>
+
+</body>
+
+
+</html>

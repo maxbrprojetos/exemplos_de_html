@@ -1,0 +1,27 @@
+<html>
+	<meta charset="utf-8"/>
+	<head>
+		<title>
+			Botões de submissão e limpeza - RESET E SUBMIT
+		</title>
+	</head>
+
+<body>
+<!--
+Obs.:
+Normalmente, o script decodificador retorna um hiperdocumento após ele processar a
+informação do formulário.
+· Nem todos os clientes suportam múltiplos botões SUBMIT. É melhor utilizar apenas um único
+botão SUBMIT para transmitir a informação digitada no formulário.
+-->
+	<form method="post" action="/cgi-bin/donothing">
+
+	Qual o seu primeiro nome?<input type="text"><br>
+	Aperte este botão: <input type="radio" name="nada"><br>
+	<input type="reset" value="Limpa campos">
+	<input type="submit">
+	</form>
+
+</body>	
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Texto Pré-formatado</title>
+	</head>
+
+	<body>
+		<!--
+		A marcação <PRE> ("deriva de proformatted") delimita uma área de texto em que espaços, novas linhas e tabulações são mantidas. Ou seja, o texto será apresentado exatamente da forma com foi digitado, mesmo que não hajam marcações do html. É uma forma de se preservar o formato de um texto.
+		Este recurso é usado por exemplo para uma lista de programas.
+
+		Podem ser definidos links dentro de textos pré-formatados. No entanto, deve-se evitar utilizar outros caracteres das marcações em áreas <PRE>. Isto porque caracteres como <, >, and & possuem um significado específico no HTML.
+
+		O ideal é utilizar as seguências especias, (&lt; &gt;, and &amp;, respectivamente) sempre que precisar representar esses caracteres.  !-->
+
+		<PRE>
+		#!bin/csh
+		cd $SCR
+		cfs get mysrc.f:mycfsdir/mysrc.f
+		cfs get myinfile:mycfsdir/myinfile
+		fc-02-o mya.out mysrc.f
+		mya.out
+		cfs save myoutfile:mycfsdir/myoutfile
+		rm * 
+		</PRE>
+
+	</body>
+</html>

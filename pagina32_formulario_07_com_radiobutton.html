@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+<body>
+<!--
+Botões com opções - RADIO
+RADIOBUTTONS utilizam uma notação similar a de CHECKBOXES, contudo, apenas uma opção
+pode ser escolhida.
+Opções:
+VALUE="" OBRIGATóRIO
+Especifica o valor da opção a ser enviado para o servidor.
+Se não for definido, um valor "on" é enviado ao script decodificador.
+CHECKED RECOMENDADO
+Esta marcação especifica qual botão estará selecionado por default.
+Uma vez que uma seleção precisa ser feita, é melhor prover uma opção pre-selecionada.
+-->
+
+<!--
+Obs.:
+· Como já foi mencionado, RADIOBUTTONS não são boa escolha para listas com muitos itens,
+porque o cliente tem problemas para exibir muitos botões. É melhor utilizar o menu SELECT.
+· Uma vez que um botão é selecionado, ele não pode ser desmarcado sem selecionar outro
+botão que possua o mesmo NAME. A seleção default pode ser restaurada com a utilização do
+botão RESET, introduzido a seguir.
+· Se você utiliza vários RADIOBUTTONS com o mesmo NAME e nenhum VALUES, o servidor
+não será capaz de dizer que botão foi selecionado, uma vez que o valor "on" será retornada
+para qualquer um deles.
+
+-->
+
+	<form method="post" action="/cgi-bin/post-query">
+		Suas preferências na viagem:
+		<DL>
+		<DD>Classe de Bilhete:
+		<input type="radio" name="classe" value="eco">econômica
+		<input type="radio" name="classe" value="exe">executiva
+		<input type="radio" name="classe" value="pri">primeira
+		<DD>Localização:
+		<input type="radio" name="local" value="trans">área fumante
+		<input type="radio" name="local" value="tras">área não fumante
+		</DL>
+	</form>
+
+</body>
+
+</html>
